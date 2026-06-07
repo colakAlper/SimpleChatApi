@@ -3,10 +3,7 @@
 ## Setup
 
 ```bash
-cp .env.example .env
-docker compose up -d redis ollama
-docker compose exec ollama ollama pull llama3.2:1b
-docker compose up --build api
+docker compose up -d
 ```
 
 ## Verify
@@ -17,7 +14,7 @@ curl http://localhost:8080/api/v1/ollama/status -u admin:admin123
 curl -X POST http://localhost:8080/api/v1/chat \
   -u admin:admin123 \
   -H "Content-Type: application/json" \
-  -d "{\"message\":\"Hello\"}"
+  -d "{\"message\":\"Hello ollama\"}"
 ```
 
 Or open `http/chatbot.http` in VS Code / Rider (REST Client).

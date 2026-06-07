@@ -14,5 +14,5 @@ Authorization: {{auth}}
 Content-Type: application/json
 
 {
-  "message": "Merhaba"
+  "message": "Merhaba; yapay zeka hakkındaki özet düşüncelerin neler?"
 }
