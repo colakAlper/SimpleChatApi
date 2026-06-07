@@ -1,14 +1,15 @@
 @host = http://localhost:8080
+// For the locale usage port is "54904"
 @auth = Basic YWRtaW46YWRtaW4xMjM=
 
-GET {{host}}/api/health
+GET {{host}}/api/v1/health
 
 ###
-GET {{host}}/api/ollama/status
+GET {{host}}/api/v1/ollama/status
 Authorization: {{auth}}
 
 ###
-POST {{host}}/api/chat
+POST {{host}}/api/v1/chat
 Authorization: {{auth}}
 Content-Type: application/json
 

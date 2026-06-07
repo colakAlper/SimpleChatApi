@@ -1,29 +1,29 @@
-# Mimari
+﻿# Mimari
 
 Klasörler ikiye ayrıldı.
 
 ```text
 src
-  CB.Api
-  CB.Application
-  CB.Domain
-  CB.Infrastructure
+  SCA.Api
+  SCA.Application
+  SCA.Domain
+  SCA.Infrastructure
 
 tests
-  CB.IntegrationTests
+  SCA.IntegrationTests
 ```
 
 Katmanlar:
 
-- `CB.Api`: Controller, authentication, DTO, response wrapper.
-- `CB.Application`: CQRS, MediatR handler, FluentValidation pipeline.
-- `CB.Domain`: Basit iş kuralları.
-- `CB.Infrastructure`: Redis cache ve Ollama HTTP client.
-- `CB.IntegrationTests`: Endpoint testleri.
+- `SCA.Api`: Controller, authentication, DTO, response wrapper.
+- `SCA.Application`: CQRS, MediatR handler, FluentValidation pipeline.
+- `SCA.Domain`: Basit iş kuralları.
+- `SCA.Infrastructure`: Redis cache ve Ollama HTTP client.
+- `SCA.IntegrationTests`: Endpoint testleri.
 
 Feature örneği:
 
 ```text
-CB.Api/Features/Chat
-CB.Application/Features/Chat/AskChat
+SCA.Api/Features/Chat
+SCA.Application/Features/Chat/AskChat
 ```

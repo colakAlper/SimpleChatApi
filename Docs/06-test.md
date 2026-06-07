@@ -1,15 +1,15 @@
-# Test
+﻿# Test
 
 Test projesi:
 
 ```text
-tests/CB.IntegrationTests
+tests/SCA.IntegrationTests
 ```
 
 Çalıştırma:
 
 ```bash
-dotnet test CB.sln
+dotnet test SCA.sln
 ```
 
 Testlerde gerçek Redis ve Ollama yerine fake servisler kullanılır.

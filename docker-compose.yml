@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: cb-api
+    container_name: sca-api
     ports:
       - "8080:8080"
     environment:
@@ -21,7 +21,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: cb-redis
+    container_name: sca-redis
     ports:
       - "6379:6379"
     healthcheck:
@@ -33,7 +33,7 @@ services:
 
   ollama:
     image: ollama/ollama:latest
-    container_name: cb-ollama
+    container_name: sca-ollama
     ports:
       - "11434:11434"
     volumes:
