@@ -1,0 +1,17 @@
+@host = http://localhost:8080
+@auth = Basic YWRtaW46YWRtaW4xMjM=
+
+GET {{host}}/api/health
+
+###
+GET {{host}}/api/ollama/status
+Authorization: {{auth}}
+
+###
+POST {{host}}/api/chat
+Authorization: {{auth}}
+Content-Type: application/json
+
+{
+  "message": "Merhaba"
+}
