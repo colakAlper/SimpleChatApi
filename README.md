@@ -5,10 +5,7 @@
 ## Quick Start
 
 ```bash
-cp .env.example .env
-docker compose up -d redis ollama
-docker compose exec ollama ollama pull llama3.2:1b
-docker compose up --build api
+docker compose up -d
 ```
 
 ```bash
@@ -18,21 +15,57 @@ curl -X POST http://localhost:8080/api/v1/chat \
   -d "{\"message\":\"Hello\"}"
 ```
 
-## Documentation
+## Proje Gereksinimleri
+
+Proje kararları ve teknik tercihlerin tamamı: **[Docs/overview.md](Docs/overview.md)**
+
+| Başlık | Karar |
+|---|---|
+| Asterisk Entegrasyonu | `Answer()` → STT → API → TTS → `Playback()` |
+| STT | Whisper / whisper.cpp (ücretsiz, lokal, Türkçe) |
+| TTS | Piper TTS (ücretsiz, lokal, hafif, `.wav`) |
+| Yapay Zeka | Ollama (ücretsiz, lokal, Docker) |
+| Test Süreci | Docker Compose → curl / `.http` dosyaları |
+| Teknik Tercihler | .NET 8, Ollama, Redis, Serilog, Basic Auth, CQRS/MediatR, FluentValidation, Docker |
+
+## Dokümantasyon
+
+### Başlangıç
 
 | Doc | Topic |
 |---|---|
 | [Getting Started](Docs/getting-started.md) | Setup, configuration, curl examples |
-| [Architecture](Docs/architecture.md) | Layers, request flow diagram |
 | [Start](Docs/start.md) | Program.cs, health gate, Serilog, DI chain |
-| [Basic Auth](Docs/basic-auth.md) | HTTP Basic Authentication |
-| [ApiResponse](Docs/api-response.md) | Single response pattern |
+| [Test](Docs/test.md) | Integration tests, fakes |
+
+### Mimari
+
+| Doc | Topic |
+|---|---|
+| [Architecture](Docs/architecture.md) | Layers, request flow diagram |
 | [CQRS](Docs/cqrs.md) | Command, handler, MediatR |
-| [Validation](Docs/validation.md) | FluentValidation pipeline |
 | [DTO](Docs/dto.md) | Request/response objects |
-| [Exception](Docs/exception.md) | Global exception handler |
-| [Redis](Docs/redis.md) | Cache flow, TTL, health check |
-| [Ollama](Docs/ollama.md) | Model integration, health check |
 | [Extensions](Docs/extensions.md) | Extension method classes |
 | [Constants](Docs/constants.md) | ChatRules, section names |
-| [Test](Docs/test.md) | Integration tests, fakes |
+
+### Güvenlik
+
+| Doc | Topic |
+|---|---|
+| [Basic Auth](Docs/basic-auth.md) | HTTP Basic Authentication |
+
+### API
+
+| Doc | Topic |
+|---|---|
+| [ApiResponse](Docs/api-response.md) | Single response pattern |
+| [Exception](Docs/exception.md) | Global exception handler |
+| [Validation](Docs/validation.md) | FluentValidation pipeline |
+
+### Altyapı
+
+| Doc | Topic |
+|---|---|
+| [Redis](Docs/redis.md) | Cache flow, TTL, health check |
+| [Ollama](Docs/ollama.md) | Model integration, health check |
+| [Logging](Docs/logging.md) | Serilog, structured logging, sinks |

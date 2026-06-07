@@ -1,34 +1,32 @@
 ﻿<Solution>
-    <Configurations>
-        <Platform Name="Any CPU"/>
-    </Configurations>
     <Folder Name="/src/">
-        <Project Path="src/SCA.Api/SCA.Api.csproj"/>
-        <Project Path="src/SCA.Application/SCA.Application.csproj"/>
-        <Project Path="src/SCA.Domain/SCA.Domain.csproj"/>
-        <Project Path="src/SCA.Infrastructure/SCA.Infrastructure.csproj"/>
+        <Project Path="src/SCA.Api/SCA.Api.csproj" />
+        <Project Path="src/SCA.Application/SCA.Application.csproj" />
+        <Project Path="src/SCA.Domain/SCA.Domain.csproj" />
+        <Project Path="src/SCA.Infrastructure/SCA.Infrastructure.csproj" />
     </Folder>
     <Folder Name="/tests/">
-        <Project Path="tests/SCA.IntegrationTests/SCA.IntegrationTests.csproj"/>
+        <Project Path="tests/SCA.IntegrationTests/SCA.IntegrationTests.csproj" />
     </Folder>
     <Folder Name="/Docs/">
-        <File Path="Docs\validation.md"/>
-        <File Path="Docs\api-response.md"/>
-        <File Path="Docs\architecture.md"/>
-        <File Path="Docs\basic-auth.md"/>
-        <File Path="Docs\constants.md"/>
-        <File Path="Docs\cqrs.md"/>
-        <File Path="Docs\dto.md"/>
-        <File Path="Docs\exception.md"/>
-        <File Path="Docs\extensions.md"/>
-        <File Path="Docs\getting-started.md"/>
-        <File Path="Docs\ollama.md"/>
-        <File Path="Docs\redis.md"/>
-        <File Path="Docs\start.md"/>
-        <File Path="Docs\test.md"/>
+        <File Path="Docs\validation.md" />
+        <File Path="Docs/overview.md" />
+        <File Path="Docs\api-response.md" />
+        <File Path="Docs\architecture.md" />
+        <File Path="Docs\basic-auth.md" />
+        <File Path="Docs\constants.md" />
+        <File Path="Docs\cqrs.md" />
+        <File Path="Docs\dto.md" />
+        <File Path="Docs\exception.md" />
+        <File Path="Docs\extensions.md" />
+        <File Path="Docs\getting-started.md" />
+        <File Path="Docs\ollama.md" />
+        <File Path="Docs\redis.md" />
+        <File Path="Docs\start.md" />
+        <File Path="Docs\test.md" />
     </Folder>
 
     <Folder Name="/http/">
-        <File Path="http/chatbot.http"/>
+        <File Path="http/chatbot.http" />
     </Folder>
 </Solution>
