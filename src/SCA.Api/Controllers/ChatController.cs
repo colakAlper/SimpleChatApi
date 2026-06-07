@@ -14,7 +14,7 @@ namespace SCA.Api.Controllers;
 public sealed class ChatController(ISender sender, ILogger<ChatController> logger) : ApiControllerBase
 {
     /// <summary>
-    /// Handles POST /api/chat.
+    /// Handles POST /api/v1/chat.
     /// </summary>
     [HttpPost]
     public async Task<ActionResult<ApiResponse>> Ask([FromBody] AskChatCommand request, CancellationToken cancellationToken)

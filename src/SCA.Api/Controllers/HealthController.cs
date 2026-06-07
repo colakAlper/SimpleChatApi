@@ -12,7 +12,7 @@ namespace SCA.Api.Controllers;
 public sealed class HealthController : ApiControllerBase
 {
     /// <summary>
-    /// Handles GET /api/health.
+    /// Handles GET /api/v1/health.
     /// </summary>
     [HttpGet]
     public ActionResult<ApiResponse> Get()

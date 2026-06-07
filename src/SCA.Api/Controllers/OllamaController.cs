@@ -13,7 +13,7 @@ namespace SCA.Api.Controllers;
 public sealed class OllamaController(IOllamaClient ollamaClient) : ApiControllerBase
 {
     /// <summary>
-    /// Handles GET /api/ollama/status.
+    /// Handles GET /api/v1/ollama/status.
     /// </summary>
     [HttpGet("status")]
     public async Task<ActionResult<ApiResponse>> Status(CancellationToken cancellationToken)
